@@ -4,8 +4,9 @@ let findMatching = function(drivers, string) {
 }
 
 let fuzzyMatch = function(drivers, string) {
+  let re = new RegExp(string);
   return drivers.filter( function(current) {
-    console.log(current[0])
+    return re.test(current);
   });
 }
 
