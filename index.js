@@ -4,7 +4,7 @@ let findMatching = function(drivers, string) {
 }
 
 let fuzzyMatch = function(drivers, string) {
-  let re = new RegExp(string);
+  let re = new RegExp('^' + string);
   return drivers.filter( function(current) {
     return re.test(current);
   });
